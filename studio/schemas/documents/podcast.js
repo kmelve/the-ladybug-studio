@@ -1,6 +1,6 @@
-import { FaPodcast } from 'react-icons/fa'
+import {FaPodcast} from 'react-icons/fa'
 
-import languages from '../languages';
+import languages from '../languages'
 
 export default {
   name: 'podcast',
@@ -35,7 +35,7 @@ export default {
       description: 'The main hosts of the podcast',
       validation: Rule => Rule.unique(),
       of: [
-        { type: 'reference', to: [{type: 'person'}]}
+        {type: 'reference', to: [{type: 'person'}]}
       ]
     },
     {
@@ -69,13 +69,13 @@ export default {
       name: 'itunes',
       title: 'iTunes settings',
       type: 'itunes',
-      description: 'iTunes has extra stuff',
+      description: 'iTunes has extra stuff'
     },
     {
       name: 'subscribe',
       type: 'subscribe',
       title: 'Subscription links'
-    },
+    }
   ],
   preview: {
     select: {
@@ -85,4 +85,4 @@ export default {
       media: 'coverArt'
     }
   }
-};
+}

@@ -1,4 +1,4 @@
-import { MdPlayArrow } from 'react-icons/md'
+import {MdPlayArrow} from 'react-icons/md'
 import Player from '../../components/player/'
 
 export default {
@@ -17,7 +17,7 @@ export default {
     {
       name: 'schedule',
       type: 'schedule',
-      title: 'Publish schedule',
+      title: 'Publish schedule'
     },
     {
       name: 'file',
@@ -42,7 +42,7 @@ export default {
     {
       name: 'subtitle',
       type: 'string',
-      title: 'Subtitle',
+      title: 'Subtitle'
     },
     {
       name: 'explicit',
@@ -122,7 +122,7 @@ export default {
     {
       name: 'itunes',
       title: 'iTunes Settings',
-      type: 'itunesEpisodeSettings',
+      type: 'itunesEpisodeSettings'
     },
     {
       name: 'coverArt',
@@ -134,7 +134,7 @@ export default {
       type: 'array',
       title: 'Sponsors',
       of: [
-        { type: 'sponsorRead' }
+        {type: 'sponsorRead'}
       ]
     },
     {
@@ -168,9 +168,8 @@ export default {
       fileUrl: 'file',
       schedule: 'schedule'
     },
-    prepare({title, subtitle, description, file, fileUrl, schedule, coverArt,}) {
-      const soundURL = file || fileUrl
-      const { publish, unpublish } = schedule
+    prepare ({title, subtitle, description, schedule, coverArt}) {
+      const {publish, unpublish} = schedule
       return {
         title,
         subtitle: schedule ? `${new Date(publish).toDateString()}${unpublish ? ` - ${new Date(unpublish).toDateString()}` : ''}` : 'Unscheduled',
@@ -179,4 +178,4 @@ export default {
       }
     }
   }
-};
+}

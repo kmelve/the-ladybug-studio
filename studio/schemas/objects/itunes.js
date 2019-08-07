@@ -1,5 +1,3 @@
-import categories from './categories';
-
 export default {
   name: 'itunes',
   title: 'iTunes settings',
@@ -15,7 +13,7 @@ export default {
     {
       name: 'owner',
       type: 'owner',
-      title: 'Owner',
+      title: 'Owner'
     },
     {
       name: 'url',
