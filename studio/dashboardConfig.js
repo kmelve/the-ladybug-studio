@@ -36,7 +36,7 @@ export default {
     {name: 'project-users', layout: {height: 'auto'}},
     {
       name: 'document-list',
-      options: {title: 'Recently edited', order: '_updatedAt desc', limit: 10, types: []},
+      options: {title: 'Recently edited', order: '_updatedAt desc', limit: 10, types: ['episode', 'person']},
       layout: {width: 'medium'}
     }
   ]
